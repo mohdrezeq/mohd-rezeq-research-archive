@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Rezeq Research Archive — Dr. Moh'd Rezeq</title>
+
+<meta name="description"
+content="Rezeq Research Archive — research, innovation, publications, patents and academic work associated with Dr. Moh'd Rezeq.">
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f3ee;
+    color: #171717;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 6%;
+    background: rgba(245,243,238,.92);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid #ddd9d0;
+}
+
+.logo {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+    font-size: 12px;
+    color: #666;
+}
+
+.nav-links a:hover {
+    color: #000;
+}
+
+.hero {
+    min-height: 92vh;
+    padding: 150px 8% 100px;
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    gap: 70px;
+    align-items: center;
+    border-bottom: 1px solid #ddd9d0;
+}
+
+.eyebrow {
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(55px, 8vw, 115px);
+    line-height: .92;
+    font-weight: 400;
+    letter-spacing: -5px;
+}
+
+.hero-description {
+    max-width: 650px;
+    margin-top: 35px;
+    font-size: 18px;
+    color: #555;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 570px;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+    filter: saturate(.9);
+}
+
+.hero-caption {
+    margin-top: 14px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #888;
+}
+
+.section {
+    padding: 110px 8%;
+    border-bottom: 1px solid #ddd9d0;
+}
+
+.section-number {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #888;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.section-title {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(42px, 6vw, 75px);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -3px;
+    margin-bottom: 45px;
+}
+
+.intro {
+    max-width: 850px;
+    font-size: 21px;
+    color: #444;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: #d8d4cc;
+    margin-top: 55px;
+}
+
+.card {
+    background: #f5f3ee;
+    padding: 40px 30px;
+    min-height: 220px;
+}
+
+.card-number {
+    font-size: 11px;
+    color: #999;
+    margin-bottom: 35px;
+}
+
+.card h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 27px;
+    font-weight: 400;
+    margin-bottom: 14px;
+}
+
+.card p {
+    color: #666;
+    font-size: 14px;
+}
+
+.timeline {
+    border-top: 1px solid #ccc7bd;
+    margin-top: 45px;
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 40px;
+    padding: 30px 0;
+    border-bottom: 1px solid #ccc7bd;
+}
+
+.year {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 25px;
+}
+
+.timeline-item h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.timeline-item p {
+    color: #666;
+}
+
+.patents {
+    display: grid;
+    gap: 1px;
+    background: #d8d4cc;
+    margin-top: 45px;
+}
+
+.patent {
+    background: #f5f3ee;
+    padding: 32px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center;
+}
+
+.patent strong {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.patent span {
+    font-size: 12px;
+    color: #777;
+}
+
+.links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: #d8d4cc;
+    margin-top: 45px;
+}
+
+.link {
+    padding: 35px;
+    background: #f5f3ee;
+    transition: .2s;
+}
+
+.link:hover {
+    background: #e9e6df;
+}
+
+.link small {
+    display: block;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 9px;
+    margin-bottom: 12px;
+}
+
+.link strong {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.notice {
+    margin-top: 45px;
+    padding: 25px;
+    border-left: 2px solid #222;
+    background: #ebe8e1;
+    color: #555;
+    font-size: 13px;
+}
+
+.footer {
+    padding: 55px 8%;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    color: #777;
+    font-size: 11px;
+}
+
+.footer-title {
+    color: #222;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+@media(max-width: 850px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 130px;
+    }
+
+    .hero-image {
+        max-width: none;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .links {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-item {
+        grid-template-columns: 80px 1fr;
+        gap: 20px;
+    }
+
+    .patent {
+        display: block;
+    }
+
+    .patent span {
+        display: block;
+        margin-top: 10px;
+    }
+
+    .footer {
+        display: block;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav class="nav">
+    <div class="logo">REZEQ RESEARCH ARCHIVE</div>
+
+    <div class="nav-links">
+        <a href="#research">Research</a>
+        <a href="#patents">Patents</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#profiles">Profiles</a>
+    </div>
+</nav>
+
+
+<header class="hero">
+
+    <div>
+
+        <div class="eyebrow">
+            Research · Innovation · Academic Documentation
+        </div>
+
+        <h1>
+            Dr.<br>
+            Moh'd<br>
+            Rezeq
+        </h1>
+
+        <p class="hero-description">
+            Associate Professor of Physics at Khalifa University,
+            working across nanotechnology, nanoelectronics,
+            nanofabrication and nanoscale technologies.
+        </p>
+
+    </div>
+
+
+    <div>
+
+        <img
+            class="hero-image"
+            src="https://www.ku.ac.ae/wp-content/uploads/2026/07/Dr_Rezeq_Sensor_lab_photo-768x432.jpeg"
+            alt="Dr. Moh'd Rezeq"
+        >
+
+        <div class="hero-caption">
+            Khalifa University · Abu Dhabi
+        </div>
+
+    </div>
+
+</header>
+
+
+<section class="section" id="research">
+
+    <div class="section-number">01 — Research</div>
+
+    <h2 class="section-title">
+        Research at<br>
+        the nanoscale.
+    </h2>
+
+    <p class="intro">
+        Dr. Moh'd Rezeq's research spans nanoscale science and
+        technology, with work involving nanotechnology,
+        nanoelectronics, nanofabrication, nanosensors and
+        advanced nanoscale devices.
+    </p>
+
+
+    <div class="grid">
+
+        <div class="card">
+            <div class="card-number">01</div>
+            <h3>Nanotechnology</h3>
+            <p>
+                Research involving nanoscale materials,
+                structures and technologies.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-number">02</div>
+            <h3>Nanoelectronics</h3>
+            <p>
+                Development and investigation of electronic
+                devices at extremely small scales.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-number">03</div>
+            <h3>Nanofabrication</h3>
+            <p>
+                Advanced fabrication and characterization
+                techniques for nanoscale structures.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-number">04</div>
+            <h3>Nanosensors</h3>
+            <p>
+                Research into nanoscale sensing technologies
+                and emerging sensor systems.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-number">05</div>
+            <h3>Advanced Materials</h3>
+            <p>
+                Investigation of materials and structures
+                for emerging technological applications.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-number">06</div>
+            <h3>Energy Technologies</h3>
+            <p>
+                Research connected to emerging nanoscale
+                approaches for energy-related technologies.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section" id="patents">
+
+    <div class="section-number">02 — Patents</div>
+
+    <h2 class="section-title">
+        From research<br>
+        to invention.
+    </h2>
+
+    <p class="intro">
+        Patented work associated with Dr. Moh'd Rezeq includes
+        technologies in nanoscale electronics and ion-electron
+        source fabrication.
+    </p>
+
+
+    <div class="patents">
+
+        <div class="patent">
+            <strong>
+                Nano Tunneling Field Effect Transistor
+            </strong>
+
+            <span>
+                U.S. Patent 8,563,966
+            </span>
+        </div>
+
+        <div class="patent">
+            <strong>
+                Fabrication of a Super Nano Ion-Electron Source
+            </strong>
+
+            <span>
+                U.S. Patent 8,460,049
+            </span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section" id="timeline">
+
+    <div class="section-number">03 — Academic Timeline</div>
+
+    <h2 class="section-title">
+        Research,<br>
+        education & impact.
+    </h2>
+
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+            <div class="year">01</div>
+
+            <div>
+                <h3>Physics & Nanotechnology</h3>
+                <p>
+                    Academic research focused on physics and
+                    nanoscale technologies.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="timeline-item">
+            <div class="year">02</div>
+
+            <div>
+                <h3>Khalifa University</h3>
+                <p>
+                    Academic and research work at Khalifa University
+                    in Abu Dhabi.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="timeline-item">
+            <div class="year">03</div>
+
+            <div>
+                <h3>Research & Innovation</h3>
+                <p>
+                    Continued development of nanoscale research,
+                    publications, technologies and inventions.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="section-number">04 — UAE Contribution</div>
+
+    <h2 class="section-title">
+        Research in<br>
+        the UAE.
+    </h2>
+
+    <p class="intro">
+        Through research and education at Khalifa University,
+        Dr. Moh'd Rezeq contributes to the UAE's scientific and
+        technological research environment, with particular
+        interests in advanced nanoscale technologies.
+    </p>
+
+</section>
+
+
+<section class="section" id="profiles">
+
+    <div class="section-number">05 — Academic Profiles</div>
+
+    <h2 class="section-title">
+        Explore the<br>
+        research record.
+    </h2>
+
+
+    <div class="links">
+
+        <a class="link"
+           href="https://www.ku.ac.ae/college-people/mohammad-rezeq"
+           target="_blank">
+
+            <small>Institution</small>
+            <strong>Khalifa University ↗</strong>
+
+        </a>
+
+
+        <a class="link"
+           href="https://orcid.org/0000-0001-9616-2511"
+           target="_blank">
+
+            <small>Research Identifier</small>
+            <strong>ORCID ↗</strong>
+
+        </a>
+
+
+        <a class="link"
+           href="https://khazna.ku.ac.ae/en/persons/mohd-rezeq-7/"
+           target="_blank">
+
+            <small>Research Portal</small>
+            <strong>KU Research Portal ↗</strong>
+
+        </a>
+
+
+        <a class="link"
+           href="https://scholar.google.com/citations?user=crNVL_cAAAAJ&hl=en"
+           target="_blank">
+
+            <small>Citations</small>
+            <strong>Google Scholar ↗</strong>
+
+        </a>
+
+
+        <a class="link"
+           href="https://www.scopus.com/authid/detail.uri?authorId=7801554482"
+           target="_blank">
+
+            <small>Research Database</small>
+            <strong>Scopus ↗</strong>
+
+        </a>
+
+
+        <a class="link"
+           href="https://www.researchgate.net/profile/Mohd-Rezeq"
+           target="_blank">
+
+            <small>Academic Network</small>
+            <strong>ResearchGate ↗</strong>
+
+        </a>
+
+    </div>
+
+
+    <div class="notice">
+        This website is a public research archive and documentation
+        resource. For authoritative academic information, please
+        refer to the linked institutional and academic profiles.
+    </div>
+
+</section>
+
+
+<footer class="footer">
+
+    <div>
+        <div class="footer-title">REZEQ RESEARCH ARCHIVE</div>
+        <div>Research · Innovation · Academic Documentation</div>
+    </div>
+
+    <div>
+        Dr. Moh'd Rezeq · Abu Dhabi · UAE
+    </div>
+
+</footer>
+
+</body>
+</html>
